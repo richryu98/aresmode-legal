@@ -55,14 +55,20 @@
 <h2>3. Information Sharing</h2>
 <p>We share your information only with the following third parties:</p>
 <ul>
-<li><strong>OpenAI</strong> — the AI models that generate workout prescriptions and analysis. Requests are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway).</li>
+<li><strong>OpenAI</strong> — the AI models that generate workout prescriptions and read your text, voice, and photo entries. Requests are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway).</li>
+<li><strong>Google</strong> — the AI models that analyze the training and match video you submit for analysis (Gemini). Requests are routed through the same infrastructure provider.</li>
 <li><strong>RevenueCat</strong> — subscription and payment management</li>
 <li><strong>Apple</strong> — user account authentication and payment processing</li>
 </ul>
 <p>We do not sell your personal information to third parties. <strong>Aresmode contains no advertising and no advertising SDKs.</strong></p>
 
 <h2>4. AI-Based Services</h2>
-<p>Aresmode uses AI models provided by <strong>OpenAI</strong> to generate personalized workout prescriptions and to analyze training or match footage you submit. The text of your training context (for example logged sessions, goals, and condition data) and any media you explicitly submit for analysis are sent for processing. Requests are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway).</p>
+<p>Aresmode uses AI models from two providers, and which one receives your data depends on what you submit:</p>
+<ul>
+<li><strong>OpenAI</strong> — personalized workout prescriptions, coaching answers, and reading the text, voice recordings, and photos you enter. The text of your training context (for example logged sessions, goals, and condition data) is sent for processing.</li>
+<li><strong>Google (Gemini)</strong> — analysis of the training or match <strong>video</strong> you explicitly submit. Still images are extracted from that video on your device and those images are sent for processing.</li>
+</ul>
+<p>Requests to both providers are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway). Media is sent only when you explicitly submit it for analysis.</p>
 <p>AI output is for training guidance only and is <strong>not medical advice</strong>. Aresmode does not diagnose, treat, or prescribe for any medical condition.</p>
 
 <h2>5. Data Retention</h2>
