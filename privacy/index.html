@@ -3,7 +3,7 @@
 <title>Privacy Policy — Aresmode</title><link rel="stylesheet" href="../style.css"></head>
 <body><div class="wrap">
 <header><div class="mark">Aresmode</div><h1>Privacy Policy</h1>
-<p class="meta">Last updated: August 12, 2026</p>
+<p class="meta">Last updated: August 18, 2026</p>
 <p class="lang"><a href="../ko/privacy/">한국어</a><a href="../terms/">Terms</a><a href="../">Legal home</a></p></header>
 
 <p>This Privacy Policy describes how 아레스모드 (doing business as <strong>Aresmode</strong>) collects, uses, and shares your personal information when you use our mobile application Aresmode.</p>
@@ -16,29 +16,31 @@
 <li>Email addresses</li>
 <li>Contact or authentication data (via Apple Sign In)</li>
 <li>Health and fitness data (workout records, physical condition, body metrics)</li>
-<li>Photos and videos you choose to submit for AI analysis (training or match footage, workout board photos)</li>
-<li>Voice recordings you choose to make for voice logging</li>
+<li>Age and gender when you add them to your training profile</li>
+<li>Photos or weekly-plan documents you choose to submit, and still keyframes extracted on your device from videos you choose for AI analysis</li>
+<li>Voice-log transcripts created with Apple's Speech Recognition service; live audio may be processed by Apple, while Aresmode does not store it or send it to OpenAI or Google</li>
 </ul>
+<p>When you permanently delete an account, the Apple identity token sent to the deletion service can contain Apple's email claim. The token is used only to authorize that deletion request.</p>
 <h3>Sensitive Information</h3>
 <p>We process health data with your consent or as permitted by applicable law.</p>
 <h3>Payment Data</h3>
 <p>All payment data is handled by <strong>RevenueCat</strong> and <strong>Apple</strong>. We do not receive or store your card information. See their privacy policies: <a href="https://www.revenuecat.com/privacy">RevenueCat</a>, <a href="https://www.apple.com/legal/privacy">Apple</a>.</p>
 <h3>Health Data from Apple Health</h3>
-<p>With your permission, Aresmode reads health and workout data from Apple Health (for example heart rate, sleep, heart rate variability, resting heart rate, body mass, workouts, and active energy) to inform your training recommendations. Apple Health data is processed on your device and is <strong>never sold, and never used for advertising</strong>. You can revoke this permission at any time in the iOS Settings app.</p>
+<p>With your permission, Aresmode reads selected Apple Health data: heart-rate variability, resting and active heart rate, sleep, active and basal energy, workouts, body mass, exercise time, respiratory rate, one-minute heart-rate recovery, VO2 max, workout effort, and sleeping wrist temperature. The app is <strong>read-only</strong> and never writes to Apple Health. Raw HealthKit samples are processed on your device; when you ask for a personalized session, selected recovery and training values may be included in that AI request. Health data is <strong>never sold and never used for advertising</strong>. You can revoke permission at any time in iOS Settings.</p>
 <h3>Automatically Collected</h3>
 <ul>
-<li>Log and usage data (IP address, device info, app activity)</li>
-<li>Device data (device model, OS version, app identifiers)</li>
+<li>Pseudonymous usage data: a hashed random installation identifier, fixed product-interaction events, and low-cardinality properties such as mode, discipline, and feature source</li>
+<li>Limited diagnostics: a capped technical exception name or error context; no question, journal, workout content, health value, name, or email is included</li>
+<li>Feedback you choose to send, together with app version/build, generic device model, OS version, locale, app language, and send time</li>
 </ul>
 <h3>Device Permissions</h3>
 <p>Aresmode requests the following permissions. Each is optional and requested only when you use the related feature:</p>
 <ul>
 <li><strong>Microphone</strong> — voice workout logging</li>
-<li><strong>Speech Recognition</strong> — transcribing your voice logs</li>
-<li><strong>Camera</strong> — recording training or match footage for AI analysis</li>
+<li><strong>Speech Recognition</strong> — transcribing your voice logs; live audio may be processed by Apple's Speech service</li>
+<li><strong>Camera</strong> — taking an optional background photo for a share card</li>
 <li><strong>Photo Library (add)</strong> — saving share cards and reports you generate</li>
 <li><strong>Apple Health (read)</strong> — reading workout and recovery data (see above)</li>
-<li><strong>Apple Health (write)</strong> — writing workouts you log in Aresmode back to Apple Health</li>
 </ul>
 
 <h2>2. How We Use Your Information</h2>
@@ -55,24 +57,29 @@
 <h2>3. Information Sharing</h2>
 <p>We share your information only with the following third parties:</p>
 <ul>
-<li><strong>OpenAI</strong> — the AI models that generate workout prescriptions and read your text, voice, and photo entries. Requests are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway).</li>
-<li><strong>Google</strong> — the AI models that analyze the training and match video you submit for analysis (Gemini). Requests are routed through the same infrastructure provider.</li>
+<li><strong>Rork Toolkit / Vercel AI Gateway</strong> — infrastructure that routes AI requests to the selected model provider</li>
+<li><strong>OpenAI</strong> — AI models that generate workout prescriptions and read text, voice-log transcripts, submitted photos, and selected pages from a weekly-plan document</li>
+<li><strong>Google</strong> — Gemini models that analyze still keyframes extracted on your device from the training, match, or posture video you select; the complete video is not uploaded</li>
 <li><strong>RevenueCat</strong> — subscription and payment management</li>
-<li><strong>Apple</strong> — user account authentication and payment processing</li>
+<li><strong>TelemetryDeck</strong> — pseudonymous product-interaction and limited diagnostic events</li>
+<li><strong>Formspree</strong> — feedback you explicitly submit and the attached technical context listed above</li>
+<li><strong>Apple</strong> — user account authentication, payment processing, and Speech Recognition. Live voice audio may be sent to Apple's Speech service; Aresmode does not store it or send it to OpenAI or Google.</li>
 </ul>
 <p>We do not sell your personal information to third parties. <strong>Aresmode contains no advertising and no advertising SDKs.</strong></p>
 
 <h2>4. AI-Based Services</h2>
 <p>Aresmode uses AI models from two providers, and which one receives your data depends on what you submit:</p>
 <ul>
-<li><strong>OpenAI</strong> — personalized workout prescriptions, coaching answers, and reading the text, voice recordings, and photos you enter. The text of your training context (for example logged sessions, goals, and condition data) is sent for processing.</li>
-<li><strong>Google (Gemini)</strong> — analysis of the training or match <strong>video</strong> you explicitly submit. Still images are extracted from that video on your device and those images are sent for processing.</li>
+<li><strong>OpenAI</strong> — personalized workout prescriptions, coaching answers, and interpretation of text, voice-log transcripts, up to five selected photos, or the first five pages of a weekly-plan PDF. Training context such as age, gender, body metrics, logged sessions, goals, selected condition values, and self-reported pain may be sent for processing.</li>
+<li><strong>Google (Gemini)</strong> — analysis of still keyframes extracted on your device from a training, match, or posture video you explicitly select. <strong>The complete source video is not uploaded.</strong></li>
 </ul>
 <p>Requests to both providers are routed through our infrastructure provider (Rork Toolkit / Vercel AI Gateway). Media is sent only when you explicitly submit it for analysis.</p>
 <p>AI output is for training guidance only and is <strong>not medical advice</strong>. Aresmode does not diagnose, treat, or prescribe for any medical condition.</p>
 
 <h2>5. Data Retention</h2>
-<p>We retain your personal information for as long as you have an account with us. Training records and analysis results are stored locally on your device. When your account is deleted, we delete or anonymize your data unless retention is required by law.</p>
+<p>Training records and analysis results are stored locally on your device until you delete them, permanently delete the account, or remove the app. Posture cleanup targets the five most recent completed or replay clips; a clip for an interrupted analysis can be kept temporarily so the analysis can resume. Measurements and reports can remain after an older replay clip is pruned. Match and training review videos use temporary local copies, while only selected still keyframes are sent for requested AI commentary.</p>
+<p>External processors retain or delete data under their service settings, contracts, and applicable legal obligations. Apple and RevenueCat may retain transaction records required for accounting, fraud prevention, or law. When you permanently delete an account, Aresmode removes that account's local store and media after server confirmation; this does not erase Apple Health samples or transaction records controlled by Apple or RevenueCat.</p>
+<p>Feedback messages are retained by Formspree and the recipient email account until removed under their service settings and deletion procedures.</p>
 
 <h2>6. Data Security</h2>
 <p>We implement appropriate technical and organizational measures to protect your personal information. However, no electronic transmission over the internet is 100% secure.</p>
